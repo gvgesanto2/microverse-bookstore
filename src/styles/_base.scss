@@ -14,10 +14,11 @@ html {
 }
 
 body {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
-  background-color: var(--color-grey-150);
-  color: var(--color-grey-900);
+  background-color: var(--color-body-bg);
+  color: var(--color-text);
 }
 
 a {

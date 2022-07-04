@@ -1,0 +1,46 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-separator-line);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    max-width: var(--main-content-max-width);
+    height: 100%;
+
+    padding: 0 3rem;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    -webkit-font-smoothing: antialiased;
+    margin-right: 4.7rem;
+  }
+
+  &__nav {
+    margin-right: auto;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+
+    & > li:not(:last-child) {
+      margin-right: 4.1rem;
+    }
+  }
+
+  &__nav-link {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1.9px;
+  }
+}

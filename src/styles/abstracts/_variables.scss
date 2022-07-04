@@ -1,18 +1,19 @@
 :root {
   // Color Pallete
-  --color-grey-150: #e7e5e5;
-  --color-primary-300: #ffa500;
-  --color-grey-200: #e1e1e6;
-  --color-grey-350: #ccc;
-  --color-grey-600: #606060;
-  --color-grey-700: #424145;
-  --color-grey-800: #272a32;
-  --color-grey-900: #121214;
+  --color-grey-50: #fafafa;
+  --color-primary-300: #0290ff;
+  --color-grey-200: #e8e8e8;
+  --color-grey-900: #121212;
   --color-white: #fff;
 
   // Other color variables
   --color-primary: var(--color-primary-300);
+  --color-text: var(--color-grey-900);
+  --color-body-bg: var(--color-grey-50);
+  --color-separator-line: var(--color-grey-200);
 
   // Header
   --header-height: 9rem;
+
+  --main-content-max-width: 120rem;
 }
