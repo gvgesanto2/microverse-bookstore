@@ -1,0 +1,18 @@
+:root {
+  // Color Pallete
+  --color-grey-50: #fafafa;
+  --color-primary-300: #0290ff;
+  --color-grey-200: #e8e8e8;
+  --color-grey-900: #121212;
+  --color-white: #fff;
+
+  // Other color variables
+  --color-primary: var(--color-primary-300);
+  --color-text: var(--color-grey-900);
+  --color-body-bg: var(--color-grey-50);
+  --color-separator-line: var(--color-grey-200);
+
+  // Header
+  --header-height: 9rem;
+  --main-content-max-width: 120rem;
+}
