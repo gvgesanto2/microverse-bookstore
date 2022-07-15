@@ -1,23 +1,15 @@
+import { useSelector } from 'react-redux/es/exports';
+
+import { selectBookItems } from '../../redux/book/book.selector';
 import Book from '../book/book.component';
 import './books-list.styles.scss';
 
-const books = [
-  {
-    id: 1,
-    title: 'title 1',
-    author: 'author 1',
-  },
-  {
-    id: 2,
-    title: 'title 2',
-    author: 'author 2',
-  },
-];
-
 export default function BooksList() {
+  const bookItems = useSelector(selectBookItems);
+
   return (
     <ul className="books-list">
-      {books.map((book) => (
+      {bookItems.map((book) => (
         <Book key={book.id} book={book} />
       ))}
     </ul>
