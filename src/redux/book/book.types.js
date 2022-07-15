@@ -1,6 +1,12 @@
 /* eslint-disable import/prefer-default-export */
 const SET_BOOK_ITEMS = 'book/SET_BOOK_ITEMS';
+const FETCH_BOOKS_START = 'books/FETCH_BOOKS_START';
+const FETCH_BOOKS_SUCCESS = 'books/FETCH_BOOKS_SUCCESS';
+const FETCH_BOOKS_FAILURE = 'books/FETCH_BOOKS_FAILURE';
 
 export const BOOK_ACTION_TYPES = {
   SET_BOOK_ITEMS,
+  FETCH_BOOKS_START,
+  FETCH_BOOKS_SUCCESS,
+  FETCH_BOOKS_FAILURE,
 };
