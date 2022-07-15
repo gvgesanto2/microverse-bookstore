@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux/es/exports';
 
-import { selectBookItems } from '../../redux/books/book.selector';
+import { selectBookItems } from '../../redux/book/book.selector';
 import Book from '../book/book.component';
 import './books-list.styles.scss';
 

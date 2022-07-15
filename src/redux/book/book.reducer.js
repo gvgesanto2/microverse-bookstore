@@ -4,9 +4,7 @@ const INITIAL_STATE = {
   bookItems: [],
 };
 
-const bookReducer = (state = INITIAL_STATE, action = {}) => {
-  const { type, payload } = action;
-
+const bookReducer = (state = INITIAL_STATE, { type, payload }) => {
   switch (type) {
     case BOOK_ACTION_TYPES.SET_BOOK_ITEMS:
       return {

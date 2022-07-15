@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
-import { addBookItem } from '../../redux/books/book.actions';
+import { addBookItem } from '../../redux/book/book.actions';
 
-import { selectBookItems } from '../../redux/books/book.selector';
+import { selectBookItems } from '../../redux/book/book.selector';
 import { genNewIdForElem } from '../../utils/id.utils';
 
 const defaultFormFields = {

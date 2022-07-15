@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux/es/exports';
-import { removeBookItem } from '../../redux/books/book.actions';
-import { selectBookItems } from '../../redux/books/book.selector';
+import { removeBookItem } from '../../redux/book/book.actions';
+import { selectBookItems } from '../../redux/book/book.selector';
 
 import './book.styles.scss';
 
