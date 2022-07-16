@@ -5,5 +5,10 @@ const selectBookReducer = (state) => state.book;
 
 export const selectBookItems = createDraftSafeSelector(
   selectBookReducer,
-  (book) => book.bookItems,
+  (bookSlice) => bookSlice.bookItems,
+);
+
+export const selectIsLoading = createDraftSafeSelector(
+  selectBookReducer,
+  (bookSlice) => bookSlice.isLoading,
 );
