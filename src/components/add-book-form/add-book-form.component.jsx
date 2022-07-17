@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux/es/exports';
-import { addBookItem } from '../../redux/book/book.actions';
+import { useDispatch } from 'react-redux/es/exports';
+import { v4 as uuidv4 } from 'uuid';
 
-import { selectBookItems } from '../../redux/book/book.selector';
-import { genNewIdForElem } from '../../utils/id.utils';
+import { addBookItem } from '../../redux/book/book.actions';
 
 const defaultFormFields = {
   title: '',
@@ -12,7 +11,6 @@ const defaultFormFields = {
 
 export default function AddBookForm() {
   const dispatch = useDispatch();
-  const bookItems = useSelector(selectBookItems);
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { title, author } = formFields;
 
@@ -29,11 +27,14 @@ export default function AddBookForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    dispatch(addBookItem(bookItems, {
-      id: genNewIdForElem(bookItems),
-      title,
-      author,
-    }));
+    dispatch(
+      addBookItem({
+        id: uuidv4(),
+        title,
+        author,
+        category: 'some category',
+      }),
+    );
 
     resetFormFields();
   };
@@ -60,10 +61,7 @@ export default function AddBookForm() {
         onChange={handleChange}
         required
       />
-      <button
-        type="submit"
-        className="add-book-form__btn"
-      >
+      <button type="submit" className="add-book-form__btn">
         Add book
       </button>
     </form>

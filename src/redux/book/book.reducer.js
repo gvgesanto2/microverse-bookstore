@@ -1,37 +1,40 @@
-import { BOOK_ACTION_TYPES } from './book.types';
-
-const initialBooks = [
-  {
-    id: 1,
-    title: 'Book 1',
-    author: 'Author 1',
-  },
-  {
-    id: 2,
-    title: 'Book 2',
-    author: 'Author 2',
-  },
-  {
-    id: 3,
-    title: 'Book 3',
-    author: 'Author 3',
-  },
-];
+/* eslint-disable no-param-reassign */
+import { createSlice } from '@reduxjs/toolkit';
+import { addBookItem, fetchBookItems } from './book.actions';
 
 const INITIAL_STATE = {
-  bookItems: initialBooks,
+  bookItems: [],
+  isLoading: false,
+  error: null,
 };
 
-const bookReducer = (state = INITIAL_STATE, { type, payload }) => {
-  switch (type) {
-    case BOOK_ACTION_TYPES.SET_BOOK_ITEMS:
-      return {
-        ...state,
-        bookItems: payload,
-      };
-    default:
-      return state;
-  }
-};
+const bookSlice = createSlice({
+  name: 'book',
+  initialState: INITIAL_STATE,
+  extraReducers: {
+    [fetchBookItems.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [fetchBookItems.fulfilled]: (state, { payload }) => {
+      state.isLoading = false;
+      state.bookItems = payload;
+    },
+    [fetchBookItems.rejected]: (state, { error }) => {
+      state.isLoading = false;
+      state.error = error.message;
+    },
+    [addBookItem.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [addBookItem.fulfilled]: (state, { payload }) => {
+      state.isLoading = false;
+      state.bookItems = payload;
+    },
+    [addBookItem.rejected]: (state, { error }) => {
+      state.isLoading = false;
+      state.error = error.message;
+    },
+  },
+});
 
-export default bookReducer;
+export default bookSlice.reducer;
