@@ -1,1 +1,137 @@
-// Add styles later
+.book {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 0.4rem;
+  border: 1px solid var(--color-separator-line);
+  padding: 3.2rem 14.7rem 2.6rem 2.7rem;
+
+  &__info-box {
+    margin-right: auto;
+  }
+
+  &__category {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    opacity: 0.5;
+    margin-bottom: 0.4rem;
+  }
+
+  &__title {
+    font-family: 'RobotoSlab', sans-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    letter-spacing: -0.2px;
+  }
+
+  &__author,
+  &__btn {
+    font-family: 'RobotoSlab', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-primary-400);
+  }
+
+  &__btn-group {
+    display: flex;
+    margin-top: 2.1rem;
+
+    & > li {
+      display: flex;
+      align-items: center;
+      height: 2.4rem;
+    }
+
+    & > li:not(:last-child) {
+      position: relative;
+      padding-right: 1.7rem;
+      margin-right: 1.7rem;
+    }
+
+    & > li:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background-color: var(--color-separator-line);
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background-color: transparent;
+    text-transform: capitalize;
+    transition: all 0.2s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__progress-container {
+    display: flex;
+    align-items: center;
+    border-right: 2px solid var(--color-separator-line);
+    padding-right: 6rem;
+    margin-right: 6rem;
+
+    h3 {
+      font-size: 3.2rem;
+      font-weight: normal;
+    }
+
+    span {
+      font-size: 1.4rem;
+      font-weight: normal;
+      opacity: 0.5;
+    }
+  }
+
+  &__progress {
+    width: 6.8rem;
+    height: 6.8rem;
+    border: double 5px transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(var(--color-white), var(--color-white)), linear-gradient(to bottom, #307bbe, #379cf6);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    margin-right: 2.1rem;
+  }
+
+  &__chapter {
+    font-family: 'RobotoSlab', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 0.7rem;
+  }
+
+  &__chapter-title {
+    font-family: 'RobotoSlab', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: -0.4px;
+    margin-bottom: 2.3rem;
+  }
+
+  &__progress-btn {
+    font-family: 'RobotoSlab', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-white);
+    border-radius: 0.3rem;
+    border: none;
+    background-color: var(--color-primary-300);
+    padding: 0.8rem 2.2rem;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

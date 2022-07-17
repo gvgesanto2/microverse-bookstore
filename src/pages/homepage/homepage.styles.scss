@@ -2,4 +2,19 @@
   max-width: var(--main-content-max-width);
   padding: 3rem;
   margin: 0 auto;
+
+  & > *:not(:last-child) {
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid var(--color-separator-line);
+  }
+
+  &__section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: -0.18px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 2rem;
+  }
 }

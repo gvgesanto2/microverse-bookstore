@@ -7,7 +7,10 @@ function HomePage() {
   return (
     <section className="home">
       <BooksList />
-      <AddBookForm />
+      <section className="home__section">
+        <h2 className="home__section-title">add book form</h2>
+        <AddBookForm />
+      </section>
     </section>
   );
 }

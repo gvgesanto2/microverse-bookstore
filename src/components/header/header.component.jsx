@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
-
+import { ReactComponent as UserIcon } from '../../assets/images/user.svg';
 import MainContent from '../main-content/main-content.component';
 
 import './header.styles.scss';
@@ -38,7 +38,7 @@ export default function Header() {
             </ul>
           </nav>
           <button type="button" className="user-btn">
-            User
+            <UserIcon className="user-btn__icon" />
           </button>
         </div>
       </header>

@@ -4,6 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 import { addBookItem } from '../../redux/book/book.actions';
 
+import './add-book-form.styles.scss';
+
 const defaultFormFields = {
   title: '',
   author: '',
