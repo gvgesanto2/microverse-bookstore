@@ -1,1 +1,5 @@
-// Add styles later
+.books-list {
+  & > li:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+}

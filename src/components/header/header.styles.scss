@@ -6,6 +6,7 @@
   height: var(--header-height);
   background-color: var(--color-white);
   border-bottom: 1px solid var(--color-separator-line);
+  z-index: 100;
 
   &__content {
     display: flex;
@@ -41,5 +42,23 @@
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 1.9px;
+  }
+}
+
+.user-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-separator-line);
+  background-color: transparent;
+
+  &__icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    color: var(--color-primary);
+    fill: var(--color-primary);
   }
 }
